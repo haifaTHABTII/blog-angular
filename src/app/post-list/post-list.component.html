@@ -1,0 +1,15 @@
+<ul class="list-group">    
+  <li class="list-group-item" *ngFor="let post of posts; let i = index"> 
+    <div [ngClass]="{
+      'list-group-item-success': post.loveIt > post.dLoveIt,
+      'list-group-item-danger': post.loveIt < post.dLoveIt}">
+      <p style="font-size:30px;" >{{  post.title }} 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      {{  created_at | date:'short'}} </p>
+      
+       <p style="font-size:18px;" > {{  post.content }} </p>
+      <button class="btn btn-success"  (click)="onLoveIt(i)" #buttonYes>Love it!</button> &nbsp;
+      <button class="btn btn-danger" (click) ="onDLoveIt(i)" #buttonNo>Don't love it!</button>  <br>
+    </div>
+  </li>    
+</ul> 

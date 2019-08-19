@@ -1,4 +1,4 @@
-import { Component, ViewChildren, ElementRef, QueryList } from '@angular/core';
+import { Component, ViewChildren, ElementRef, QueryList, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-post-list',

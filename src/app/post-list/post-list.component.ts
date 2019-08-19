@@ -1,11 +1,11 @@
-import { Component, ViewChildren, ElementRef, QueryList, OnInit } from '@angular/core';
+import { Component, ViewChildren, ElementRef, QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss']
 })
-export class PostListComponent implements OnInit {
+export class PostListComponent {
 
  @ViewChildren('buttonYes') buttonYes: QueryList<ElementRef>;
   @ViewChildren('buttonNo') buttonNo: QueryList<ElementRef>;
